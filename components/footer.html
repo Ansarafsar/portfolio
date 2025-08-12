@@ -1,0 +1,25 @@
+<!-- components/footer.html -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <h3 class="heading">Quick Links</h3>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-info">
+      <h3 class="heading">Info</h3>
+      <p class="body-text text-sm">Built with HTML, CSS, and JavaScript.</p>
+      <p class="body-text text-sm">Deployed on GitHub Pages.</p>
+    </div>
+    <p class="footer-copyright body-text text-sm">© <span id="current-year">2024</span> Ansar. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Optional: Simple script to update the year -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

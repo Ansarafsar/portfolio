@@ -1,0 +1,139 @@
+/* assets/css/animations.css */
+
+/* --- Fade-in Animations (for other parts of your site) --- */
+.animate {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate.delay-2 {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* -------------------------- */
+
+
+/* --- Marquee Animations for Widgets --- */
+/* Ensure smooth, linear, infinite animation */
+
+/* Moves content from right to left */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Moves content from left to right */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Apply animations to the tracks */
+/* Adjust the duration (e.g., 30s) to make scrolling faster or slower */
+.animate-marquee-right {
+  animation: marquee-right 30s linear infinite; /* Slower scroll */
+}
+
+.animate-marquee-left {
+  animation: marquee-left 30s linear infinite; /* Slower scroll */
+}
+
+/* Pause animation when user hovers over the track */
+#testimonial-track:hover,
+#logo-track:hover {
+  animation-play-state: paused;
+}
+/* ------------------------------------ */
+
+
+/* --- Glassmorphism Effect --- */
+/* Defined in main.css or here. Make sure it exists. */
+.glass-effect {
+  background: linear-gradient(135deg, rgba(17, 34, 64, 0.75), rgba(10, 25, 47, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(2, 12, 27, 0.37);
+  border-radius: 8px; /* Ensure rounded corners for the widget */
+}
+
+html[data-theme='light'] .glass-effect {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(248, 249, 250, 0.75));
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+/* ----------------------------- */
+
+
+/* --- Responsive Adjustments for Widgets --- */
+@media (max-width: 768px) {
+  /* Option 1: Hide */
+  /* #testimonials-widget,
+  #logos-widget {
+    display: none;
+  } */
+
+  /* Option 2: Adjust size and position */
+  #testimonials-widget,
+  #logos-widget {
+    width: 80vw;
+    left: 10vw;
+    right: 10vw;
+    top: auto;
+    bottom: 20px; /* Place at bottom */
+    z-index: 999;
+  }
+
+  #logos-widget {
+    bottom: 120px; /* Place logos above testimonials */
+  }
+
+  /* Adjust heights */
+  #testimonial-carousel {
+    height: 110px; /* Adjust if needed */
+  }
+  #logo-carousel {
+    height: 90px; /* Adjust if needed */
+  }
+
+  /* Adjust slide/box sizes for mobile */
+  .testimonial-slide {
+    width: 75vw; /* Wider on mobile */
+  }
+
+  .testimonial-box {
+    padding: 8px; /* Reduce padding on mobile */
+  }
+
+  .logo-box {
+    width: 22vw; /* Adjust width */
+    height: 15vw; /* Adjust height */
+  }
+
+  .logo-box img {
+    max-height: 9vw; /* Adjust image size */
+  }
+}
+/* ----------------------------------------- */

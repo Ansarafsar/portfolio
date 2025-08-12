@@ -1,0 +1,96 @@
+/* assets/css/components/footer.css */
+
+.site-footer {
+  background-color: var(--dark-light); /* Slightly lighter dark background */
+  color: var(--light-dark); /* Muted text color */
+  padding: 40px 0 20px 0; /* Space on top, less on bottom */
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle top border */
+  margin-top: 50px; /* Space above the footer */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-between;
+  gap: 30px; /* Space between columns */
+}
+
+.footer-links,
+.footer-info {
+  flex: 1; /* Allow columns to grow/shrink equally */
+  min-width: 200px; /* Minimum width before wrapping */
+}
+
+.footer-links h3,
+.footer-info h3 {
+  margin-bottom: 15px;
+  color: var(--light); /* Make headings slightly brighter */
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--light-dark);
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 14px; /* Slightly smaller link text */
+}
+
+.footer-links a:hover {
+  color: var(--primary); /* Highlight links on hover */
+  text-decoration: underline; /* Optional: add underline on hover */
+}
+
+.footer-info p {
+    margin: 5px 0; /* Reduced margin for info paragraphs */
+    font-size: 14px; /* Smaller text size */
+    line-height: 1.4; /* Adjusted line height for compactness */
+}
+
+.footer-copyright {
+  width: 100%; /* Span full width */
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle top border for copyright */
+  font-size: 14px; /* Small copyright text */
+  color: var(--light-dark); /* Muted color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    gap: 20px; /* Reduce gap on mobile */
+  }
+
+  .footer-links,
+  .footer-info {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .footer-links ul {
+    display: flex; /* Display links in a row on mobile */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the links */
+    gap: 15px; /* Space between links */
+  }
+
+  .footer-links li {
+    margin-bottom: 0; /* Remove bottom margin for list items in row */
+  }
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansar A| AI/ML Engineer & Tech Leader</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Calibre:wght@400;500;600;700&family=SF+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- <link rel="stylesheet" href="assets/css/fonts.css"> -->
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components/navbar.css">
+  <link rel="stylesheet" href="assets/css/components/footer.css">
+</head>
+<body class="bg-[var(--dark)] text-[var(--light)]">
+  <!-- Navbar Placeholder -->
+  <div id="navbar"></div>
+ 
+  <!-- Hero Section -->
+    <section id="hero" class="section min-h-screen flex items-center justify-center">
+    <div class="container flex flex-col lg:flex-row items-center justify-between gap-8 relative">
+      <!-- Text Content (Left on large screens) -->
+      <div class="lg:w-1/2 text-center lg:text-left z-10"> <!-- Added z-10 -->
+        <h1 class="heading text-5xl mb-4 animate"><span class="highlight">Ansar</span></h1>
+        <h2 class="body-text text-2xl mb-6 animate delay-1">Python | AI | ML | Data Science | Business Intelligence</h2>
+        <p class="body-text text-lg mb-8 animate delay-2">"Transforming data into intelligent solutions that drive business value"</p>
+        <div class="flex justify-center lg:justify-start gap-4 animate delay-2">
+          <a href="#projects" class="cta-button">See My Work</a>
+          <a href="#contact" class="cta-button outline">Contact Me</a>
+        </div>
+      </div>
+      <!-- Portrait Image (Right on large screens, absolutely positioned) -->
+      <div class="lg:w-1/2 flex justify-end lg:justify-center">
+        <div class="relative w-full max-w-xs lg:max-w-none"> <!-- Wrapper for absolute positioning -->
+          <img src="assets/images/portrait.jpg" alt="Ansar's Portrait" class="hero-portrait absolute lg:static inset-y-0 right-0 lg:mx-auto rounded-full border-4 border-[var(--primary)] shadow-xl object-cover w-48 h-48 lg:w-64 lg:h-64"> <!-- Adjusted classes -->
+        </div>
+      </div>
+    </div>
+  
+  </section>
+
+  <!-- About Section -->
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">01.</span> About Me</h2>
+      <div class="flex flex-col md:flex-row max-w-5xl mx-auto gap-8">
+        <div class="flex-1 body-text">
+          <p>As an AI/ML Engineer and Data Scientist, I specialize in building intelligent solutions that bridge data science and business strategy. Currently pursuing a Master’s in Computer Science at Government Arts College, Salem (expected 2025), I’ve led impactful projects at BOOKDIO, Unified Mentor, and ZEEX AI, driving innovation through AI, ML, and cloud technologies.</p>
+        </div>
+                <div class="flex-1">
+          <h3 class="heading text-xl mb-4">Skills</h3>
+          <!-- Skill Boxes Grid Container -->
+          <div class="skill-boxes-grid">
+            <!-- Skill Box 1 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="ml-ai-core" class="hidden">
+                <label for="ml-ai-core" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">🧠 Learning Machines, Teaching Intelligence</span>
+                  <span class="tree-label-subtext">ML & AI Core</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Forecasting Models: ARIMA, LSTM</li>
+                  <li class="tree-item">NLP: spaCy, Sentence Transformers</li>
+                  <li class="tree-item">Model Tuning: Grid Search, Cross-Validation</li>
+                  <li class="tree-item">Sentiment Analysis: VADER, NLTK</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 2 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="data-bi" class="hidden">
+                <label for="data-bi" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">📊 Visualizing the Invisible</span>
+                  <span class="tree-label-subtext">Data Analysis & BI</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Data Manipulation: Pandas, NumPy</li>
+                  <li class="tree-item">Interactive Dashboards: Power BI, Streamlit</li>
+                  <li class="tree-item">SQL: Joins, Window Functions, Aggregations</li>
+                  <li class="tree-item">Visualization: Seaborn, Matplotlib</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 3 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="mlops" class="hidden">
+                <label for="mlops" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">⚙️ Models to Machines</span>
+                  <span class="tree-label-subtext">MLOps & Deployment</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">CI/CD Pipelines: GitHub Actions</li>
+                  <li class="tree-item">Deployment: Flask APIs, AWS Lambda</li>
+                  <li class="tree-item">Workflow Automation: Scripted Pipelines</li>
+                  <li class="tree-item">Virtual Environments: virtualenv, conda</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 4 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="backend" class="hidden">
+                <label for="backend" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">🔗 Wiring the Web</span>
+                  <span class="tree-label-subtext">Backend Logic & API Integration</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">API Development: Flask, REST APIs</li>
+                  <li class="tree-item">Integration: Roboflow, OpenRouter API</li>
+                  <li class="tree-item">Data Handling: JSON, Webhooks</li>
+                  <li class="tree-item">Authentication: Token-Based Systems</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 5 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="frontend" class="hidden">
+                <label for="frontend" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">🎨 Pixel to Performance</span>
+                  <span class="tree-label-subtext">Frontend & CMS Experience</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Web Markup: HTML5, CSS3</li>
+                  <li class="tree-item">CMS Platforms: WordPress</li>
+                  <li class="tree-item">SEO & Analytics: Google Analytics, Search Console</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 6 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="cloud" class="hidden">
+                <label for="cloud" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">☁️ Cloud Control Center</span>
+                  <span class="tree-label-subtext">Cloud & Infrastructure</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Cloud Services: AWS EC2, S3</li>
+                  <li class="tree-item">Containerization: Docker</li>
+                  <li class="tree-item">IAM Roles & Permissions</li>
+                  <li class="tree-item">DevOps Integration: GitHub Actions, GitHub CLI</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 7 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="languages" class="hidden">
+                <label for="languages" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">💻 Languages I Speak (to Machines)</span>
+                  <span class="tree-label-subtext">Programming Languages</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Python</li>
+                  <li class="tree-item">SQL</li>
+                  <li class="tree-item">Core Java</li>
+                  <li class="tree-item">HTML/CSS</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 8 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="workflow" class="hidden">
+                <label for="workflow" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">🧠 How I Work</span>
+                  <span class="tree-label-subtext">Workflow, Communication & Process</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Agile Development Practices</li>
+                  <li class="tree-item">Task & Knowledge Management: Notion</li>
+                  <li class="tree-item">Version Control: Git, GitHub</li>
+                  <li class="tree-item">Team Coordination & Technical Documentation</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 9 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="org-business" class="hidden">
+                <label for="org-business" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">📈 Strategic Execution Layer</span>
+                  <span class="tree-label-subtext">Organizational & Business Skills</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Project Planning & Execution</li>
+                  <li class="tree-item">SEO Optimization & Web Metrics</li>
+                  <li class="tree-item">Stakeholder Communication & Reporting</li>
+                  <li class="tree-item">Cross-functional Team Leadership</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skill Box 10 -->
+            <div class="skill-box hover-grow-card">
+              <div class="skill-branch">
+                 <!-- *** Collapsed by default - 'checked' removed *** -->
+                <input type="checkbox" id="spoken-languages" class="hidden">
+                <label for="spoken-languages" class="cursor-pointer tree-label heading text-lg">
+                  <span class="tree-label-text">🌐 Connecting Cultures</span>
+                  <span class="tree-label-subtext">Spoken Languages</span>
+                </label>
+                <ul class="tree-sublist">
+                  <li class="tree-item">Tamil – Native</li>
+                  <li class="tree-item">English – Fluent</li>
+                  <li class="tree-item">Hindi – Fluent</li>
+                  <li class="tree-item">Malayalam – Basic</li>
+                </ul>
+              </div>
+            </div>
+
+          </div> <!-- End of skill-boxes-grid -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section bg-[var(--dark-light)]">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">02.</span> Experience</h2>
+      <div class="max-w-3xl mx-auto body-text">
+        <div class="mb-12">
+          <h3 class="heading text-xl">BOOKDIO | Data Science Intern | Jun 2023 - Aug 2023</h3>
+          <p>Led a team to enhance productivity through AI-driven analytics, optimizing content workflows.</p>
+          <p><strong>Key Project:</strong> Retail Sales Prediction Dashboard - Built an ML-powered dashboard using Python and Streamlit for sales forecasting.</p>
+        </div>
+        <div class="mb-12">
+          <h3 class="heading text-xl">Unified Mentor | Data Science Intern | Jan 2023 - Mar 2023</h3>
+          <p>Developed predictive models for business analytics, improving decision-making processes.</p>
+          <p><strong>Key Project:</strong> Smart City Mapping - Created a data visualization tool for urban planning using Tableau.</p>
+        </div>
+        <div class="mb-12">
+          <h3 class="heading text-xl">ZEEX AI | AI/ML Engineer Intern | Sep 2023 - Nov 2023</h3>
+          <p>Implemented NLP models for sentiment analysis, leveraging AWS for scalable deployment.</p>
+          <p><strong>Key Project:</strong> Multilingual Hate Speech Detection - Developed a system using Python and NLTK for real-time content moderation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">03.</span> Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-[var(--dark-light)] p-6 rounded-lg hover-grow">
+          <h3 class="heading text-xl">Retail Sales Prediction Dashboard</h3>
+          <p class="code text-sm text-[var(--light-dark)]">Python, Streamlit, TensorFlow, Pandas</p>
+          <p class="body-text">An interactive dashboard for forecasting retail sales using ML models like LSTM and Linear Regression.</p>
+          <div class="mt-4 flex gap-4">
+            <a href="https://github.com/yourusername/retailsync-ai" target="_blank" class="body-text">GitHub</a>
+            <a href="https://retailsync-ai-demo.com" target="_blank" class="body-text">Live Demo</a>
+          </div>
+        </div>
+        <div class="bg-[var(--dark-light)] p-6 rounded-lg hover-grow">
+          <h3 class="heading text-xl">Smart Retail Business Intelligence Chatbot</h3>
+          <p class="code text-sm text-[var(--light-dark)]">Python, Flask, Mistral-7B, AWS</p>
+          <p class="body-text">A chatbot for real-time business insights, integrating NLP and cloud deployment for scalability.</p>
+          <div class="mt-4 flex gap-4">
+            <a href="https://github.com/yourusername/smart-retail-chatbot" target="_blank" class="body-text">GitHub</a>
+            <a href="https://smart-retail-chatbot-demo.com" target="_blank" class="body-text">Live Demo</a>
+          </div>
+        </div>
+        <div class="bg-[var(--dark-light)] p-6 rounded-lg hover-grow">
+          <h3 class="heading text-xl">Multilingual Hate Speech Detection</h3>
+          <p class="code text-sm text-[var(--light-dark)]">Python, NLTK, AWS, Docker</p>
+          <p class="body-text">A system for detecting hate speech across languages, deployed on AWS for real-time moderation.</p>
+          <div class="mt-4 flex gap-4">
+            <a href="https://github.com/yourusername/hate-speech-detection" target="_blank" class="body-text">GitHub</a>
+            <a href="https://hate-speech-detection-demo.com" target="_blank" class="body-text">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container text-center">
+      <h2 class="section-title"><span class="highlight">04.</span> Get In Touch</h2>
+      <p class="body-text text-lg mb-8">I'm open to new opportunities and collaborations. Let's build something impactful together!</p>
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/ansar-afsar/" target="_blank" class="hover:text-[var(--primary)]"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Ansarafsar" target="_blank" class="hover:text-[var(--primary)]"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/ansar_afsar_" target="_blank" class="hover:text-[var(--primary)]"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/+918903594058" target="_blank" class="hover:text-[var(--primary)]"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer"></div>
+
+  <!-- Floating Widgets -->
+  <!-- Testimonials Widget -->
+    <!-- Floating Widgets -->
+  <!-- Testimonials Widget (No close button) -->
+    <!-- Floating Widgets -->
+  <!-- Testimonials Widget -->
+    <!-- Floating Widgets -->
+  <!-- Testimonials Widget -->
+    <!-- Floating Widgets -->
+  <!-- Testimonials Widget -->
+  <div id="testimonials-widget" class="fixed right-4 top-1/4 w-64 p-4 rounded-lg glass-effect z-10">
+    <h3 class="heading text-lg mb-2 text-center">What Colleagues Say</h3>
+    <div id="testimonial-carousel" class="overflow-hidden relative h-32">
+      <div id="testimonial-track" class="absolute inset-0 whitespace-nowrap animate-marquee-right">
+        <!-- Testimonial Slide 1 -->
+        <div class="testimonial-slide inline-block w-60 px-2 align-top">
+          <!-- *** Styled Box for Testimonial *** -->
+          <div class="testimonial-box bg-[var(--dark-light)] bg-opacity-80 p-3 rounded-lg shadow-md h-full flex flex-col justify-center">
+            <p class="body-text text-sm italic">"Ansar’s AI solutions transformed our analytics workflow, delivering unmatched efficiency."</p>
+            <p class="body-text text-xs mt-2 text-[var(--light-dark)] text-right">- Jane Doe, Data Lead at BOOKDIO</p>
+          </div>
+        </div>
+        <!-- Testimonial Slide 2 -->
+        <div class="testimonial-slide inline-block w-60 px-2 align-top">
+          <!-- *** Styled Box for Testimonial *** -->
+          <div class="testimonial-box bg-[var(--dark-light)] bg-opacity-80 p-3 rounded-lg shadow-md h-full flex flex-col justify-center">
+            <p class="body-text text-sm italic">"His leadership in ML projects was pivotal to our success."</p>
+            <p class="body-text text-xs mt-2 text-[var(--light-dark)] text-right">- John Smith, CTO at ZEEX AI</p>
+          </div>
+        </div>
+        <!-- *** Duplicate Slides for Seamless Loop *** -->
+        <div class="testimonial-slide inline-block w-60 px-2 align-top">
+          <div class="testimonial-box bg-[var(--dark-light)] bg-opacity-80 p-3 rounded-lg shadow-md h-full flex flex-col justify-center">
+            <p class="body-text text-sm italic">"Ansar’s AI solutions transformed our analytics workflow, delivering unmatched efficiency."</p>
+            <p class="body-text text-xs mt-2 text-[var(--light-dark)] text-right">- Jane Doe, Data Lead at BOOKDIO</p>
+          </div>
+        </div>
+        <div class="testimonial-slide inline-block w-60 px-2 align-top">
+          <div class="testimonial-box bg-[var(--dark-light)] bg-opacity-80 p-3 rounded-lg shadow-md h-full flex flex-col justify-center">
+            <p class="body-text text-sm italic">"His leadership in ML projects was pivotal to our success."</p>
+            <p class="body-text text-xs mt-2 text-[var(--light-dark)] text-right">- John Smith, CTO at ZEEX AI</p>
+          </div>
+        </div>
+        <!-- *** End Duplicate Slides *** -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Company Logos Widget -->
+  <div id="logos-widget" class="fixed left-4 top-1/4 w-64 p-4 rounded-lg glass-effect z-10 mt-40">
+    <h3 class="heading text-lg mb-2 text-center">Worked With</h3>
+    <div id="logo-carousel" class="overflow-hidden relative h-20">
+      <div id="logo-track" class="absolute inset-0 whitespace-nowrap animate-marquee-left">
+        <!-- Logo Box 1 -->
+        <div class="logo-box inline-flex items-center justify-center w-24 h-16 px-2 align-top">
+          <!-- *** Styled Box for Logo *** -->
+          <div class="bg-[var(--dark-light)] bg-opacity-80 p-2 rounded-lg shadow-sm flex items-center justify-center w-full h-full">
+            <img src="assets/images/logos/bookdio.png" alt="BOOKDIO" class="max-h-10 max-w-full object-contain">
+          </div>
+        </div>
+        <!-- Logo Box 2 -->
+        <div class="logo-box inline-flex items-center justify-center w-24 h-16 px-2 align-top">
+          <div class="bg-[var(--dark-light)] bg-opacity-80 p-2 rounded-lg shadow-sm flex items-center justify-center w-full h-full">
+            <img src="assets/images/logos/unifiedmentor.png" alt="Unified Mentor" class="max-h-10 max-w-full object-contain">
+          </div>
+        </div>
+        <!-- Add other logos similarly -->
+        <!-- *** Duplicate Logos for Seamless Loop *** -->
+        <div class="logo-box inline-flex items-center justify-center w-24 h-16 px-2 align-top">
+          <div class="bg-[var(--dark-light)] bg-opacity-80 p-2 rounded-lg shadow-sm flex items-center justify-center w-full h-full">
+            <img src="assets/images/logos/bookdio.png" alt="BOOKDIO" class="max-h-10 max-w-full object-contain">
+          </div>
+        </div>
+        <div class="logo-box inline-flex items-center justify-center w-24 h-16 px-2 align-top">
+          <div class="bg-[var(--dark-light)] bg-opacity-80 p-2 rounded-lg shadow-sm flex items-center justify-center w-full h-full">
+            <img src="assets/images/logos/unifiedmentor.png" alt="Unified Mentor" class="max-h-10 max-w-full object-contain">
+          </div>
+        </div>
+        <!-- *** End Duplicate Logos *** -->
+      </div>
+    </div>
+  </div>
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="fixed bottom-4 right-4 bg-[var(--primary)] text-[var(--dark)] p-2 rounded-full z-10">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/testimonials.js"></script>
+</body>
+</html>

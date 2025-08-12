@@ -1,0 +1,571 @@
+/* :root {
+  --primary: #3a86ff;
+  --primary-dark: #2667cc;
+  --dark: #0a192f;
+  --dark-light: #112240;
+  --light: #ccd6f6;
+  --light-dark: #8892b0;
+  --white: #e6f1ff;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Calibre', 'Inter', sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.section-title .highlight {
+  color: var(--primary);
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--dark);
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.cta-button.outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.cta-button.outline:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.skill-tree ul {
+  display: none;
+}
+
+.skill-tree input:checked ~ ul {
+  display: block;
+}
+
+.skill-branch label::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.skill-branch input:checked ~ label::before {
+  content: '▼';
+}
+
+#testimonials-widget, #logos-widget {
+  transition: transform 0.3s ease-in-out;
+}
+
+#testimonials-widget.hidden, #logos-widget.hidden {
+  transform: translateX(100%);
+}
+
+#logos-widget.hidden {
+  transform: translateX(-100%);
+}
+
+[data-theme="light"] {
+  --primary: #3a86ff;
+  --primary-dark: #2667cc;
+  --dark: #f8fafc;
+  --dark-light: #e2e8f0;
+  --light: #1e293b;
+  --light-dark: #475569;
+  --white: #0f172a;
+}
+
+[data-theme="light"] .glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+} */
+
+/*  qwencoder  /*
+
+/* assets/css/main.css */
+
+/* Base Theme Colors */
+/* assets/css/main.css */
+
+/* --- Base Theme Colors (Defaulting to Dark) --- */
+/* assets/css/main.css */
+
+/* --- Base Theme Colors (Defaulting to Dark) --- */
+:root {
+  /* Dark Theme Base Colors */
+  --dark: #0a192f;
+  --dark-light: #112240;
+  --light: #ccd6f6;
+  --light-dark: #8892b0;
+  --primary: #64ffda;
+
+  /* Consolidated Theme Variables for Easier Switching & Consistency */
+  --bg-body: var(--dark);
+  --text-main: var(--light); /* Headings, primary text */
+  --text-secondary: var(--light-dark); /* Body text, muted text */
+  --bg-card: var(--dark-light); /* Background for cards like projects, widgets */
+  --border-glass: rgba(255, 255, 255, 0.18); /* Glass border */
+  --shadow-glass: rgba(2, 12, 27, 0.37); /* Glass shadow */
+  --shadow-hover: rgba(2, 12, 27, 0.7); /* Hover shadow */
+
+  /* Transition for smooth theme changes */
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* Fonts */
+  --font-main: 'Calibre', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+/* Light Theme Overrides */
+html[data-theme='light'] {
+  --dark: #ffffff; /* White background */
+  --dark-light: #f5f5f5; /* Light grey background for cards */
+  --light: #333333; /* Dark grey/black text for main content */
+  --light-dark: #6c757d; /* RMB muted grey text */
+  --primary: #2a6dd1; /* Blue accent */
+
+  /* Update consolidated variables */
+  --bg-body: var(--dark);
+  --text-main: var(--light);
+  --text-secondary: var(--light-dark);
+  --bg-card: var(--dark-light);
+  --border-glass: rgba(0, 0, 0, 0.1); /* Darker border for light theme glass */
+  --shadow-glass: rgba(0, 0, 0, 0.1); /* Lighter shadow for light theme glass */
+  --shadow-hover: rgba(0, 0, 0, 0.15); /* Lighter hover shadow */
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-main);
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-body);
+  color: var(--text-secondary);
+  overflow-x: hidden;
+  transition: var(--transition-theme);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: clamp(26px, 5vw, 32px);
+  margin-bottom: 50px;
+  position: relative;
+  color: var(--text-main);
+}
+
+.section-title .highlight {
+  position: relative;
+}
+
+.section-title .highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+/* Typography */
+.heading {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.body-text {
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.cta-button:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.cta-button.outline {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.cta-button.outline:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+/* Hover Effects */
+.hover-grow, .hover-grow-card {
+  transition: var(--transition);
+  transform: translateY(0);
+  background-color: var(--bg-card);
+  border-radius: 8px;
+}
+
+.hover-grow:hover, .hover-grow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px var(--shadow-hover);
+}
+
+/* Skill Columns */
+.skill-columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.skill-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill-tree {
+  position: relative;
+  padding-left: 20px;
+}
+
+.skill-tree::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--primary);
+  z-index: 1;
+}
+
+.skill-branch {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.skill-branch::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: -20px;
+  width: 15px;
+  height: 2px;
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+.skill-branch > label.tree-label {
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  display: block;
+  padding: 8px 12px 8px 0;
+  position: relative;
+  transition: var(--transition);
+  border-radius: 4px;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.skill-branch > label.tree-label::before {
+  content: '+ ';
+  font-weight: normal;
+  margin-right: 5px;
+  color: var(--primary);
+  position: static;
+}
+
+.skill-branch > input[type="checkbox"]:checked ~ label.tree-label::before {
+  content: '- ';
+}
+
+.skill-branch > label.tree-label::after {
+  content: '▼';
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.2s ease;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.skill-branch > input[type="checkbox"]:checked ~ label.tree-label::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.skill-branch > label.tree-label:hover,
+.skill-branch > input:focus + label.tree-label {
+  color: var(--primary);
+  background-color: rgba(100, 255, 218, 0.05);
+}
+
+.skill-branch > input[type="checkbox"] {
+  display: none;
+}
+
+.skill-branch > ul.tree-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.skill-branch > input[type="checkbox"]:checked ~ ul.tree-sublist {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.skill-branch > ul.tree-sublist > li {
+  padding: 6px 0 6px 20px;
+  color: var(--text-secondary);
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.skill-branch > ul.tree-sublist > li::before {
+  content: '•';
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.skill-branch > ul.tree-sublist > li::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 15px;
+  height: 1px;
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+/* Skill Boxes Grid */
+.skill-boxes-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-columns: minmax(250px, 1fr);
+  gap: 20px;
+  padding: 5px;
+}
+
+.skill-box {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.skill-box:hover {
+  box-shadow: 0 10px 25px -5px var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+  background: linear-gradient(135deg, rgba(17, 34, 64, 0.75), rgba(10, 25, 47, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 8px 32px 0 var(--shadow-glass);
+  border-radius: 8px;
+  transition: var(--transition-theme);
+}
+
+html[data-theme='light'] .glass-effect {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(248, 249, 250, 0.75));
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 8px 32px 0 var(--shadow-glass);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .skill-boxes-grid {
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-columns: minmax(220px, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skill-columns-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .social-icons {
+    gap: 20px;
+    font-size: 20px;
+  }
+
+  #testimonials-widget,
+  #logos-widget {
+    width: 80vw;
+    left: 10vw;
+    right: 10vw;
+    top: auto;
+    bottom: 20px;
+    z-index: 999;
+  }
+
+  #logos-widget {
+    bottom: 120px;
+  }
+
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    gap: 1.5rem;
+  }
+
+  .skill-columns-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-column {
+    gap: 20px;
+  }
+
+  .skill-boxes-grid {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    padding: 5px 10px;
+    gap: 15px;
+  }
+
+  .skill-box {
+    padding: 15px;
+  }
+}
+
+/* Add this to your main.css */
+
+/* Styling for the portrait image in the hero section */
+.hero-portrait {
+  /* Adjust these values to fit your image and preference */
+  max-width: 250px; /* Limit size on smaller screens */
+  border: 2px solid var(--primary); /* Optional: Add a border using your primary color */
+  /* Add a subtle transition for hover effects if desired */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: Add a slight lift effect on hover */
+.hero-portrait:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); /* Adjust shadow color if needed */
+}
+
+/* Adjustments for larger screens (Tailwind's lg breakpoint is 1024px) */
+@media (min-width: 1024px) {
+  .hero-portrait {
+    max-width: 300px; /* Slightly larger on desktop */
+  }
+}
