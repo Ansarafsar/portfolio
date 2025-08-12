@@ -1,4 +1,4 @@
-# Ansar's Portfolio
+# Ansar's Portfolio - NOTE: STILL UNDER DEVELOPMENT
 
 A professional, minimalist, single-page portfolio website for showcasing my work as an AI/ML Engineer and Data Scientist. Built with HTML, CSS (using Tailwind classes and custom styles), and vanilla JavaScript. Designed for deployment on GitHub Pages.
 
@@ -24,4 +24,5 @@ A professional, minimalist, single-page portfolio website for showcasing my work
 *   **[Tailwind CSS](https://tailwindcss.com/):** Utility-first CSS framework (classes used directly in HTML).
 *   **[Google Fonts](https://fonts.google.com/):** Custom typography (`Calibre`, `SF Mono`).
 *   **[Font Awesome](https://fontawesome.com/):** Icons.
+
 
