@@ -569,3 +569,18 @@ html[data-theme='light'] .glass-effect {
     max-width: 300px; /* Slightly larger on desktop */
   }
 }
+/* Link styling for company names inside headings */
+.link-heading {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+  border-bottom: 1px dotted transparent;
+}
+
+.link-heading:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+  border-bottom: 1px dotted var(--primary);
+}
+
