@@ -160,8 +160,8 @@
   // ── Custom element ──────────────────────────────────────────────────────
   const stylesheet =
     ':host{display:inline-block;position:relative;vertical-align:top;' +
-    '  font:13px/1.3 system-ui,-apple-system,sans-serif;color:rgba(0,0,0,.55);width:240px;height:160px}' +
-    '.frame{position:absolute;inset:0;overflow:hidden;background:rgba(0,0,0,.04)}' +
+    '  font:13px/1.3 system-ui,-apple-system,sans-serif;color:var(--slot-text, rgba(0,0,0,.55));width:240px;height:160px}' +
+    '.frame{position:absolute;inset:0;overflow:hidden;background:var(--slot-bg, rgba(0,0,0,.04))}' +
     // .frame img (clipped) and .spill (unclipped ghost + handles) share the
     // same left/top/width/height in frame-%, computed by _applyView(), so the
     // inside-mask crop and the outside-mask spill stay pixel-aligned.
@@ -178,7 +178,7 @@
     '  pointer-events:none;-webkit-user-drag:none;user-select:none;' +
     '  box-shadow:0 0 0 1px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.2)}' +
     '.spill .handle{position:absolute;width:12px;height:12px;border-radius:50%;' +
-    '  background:#fff;box-shadow:0 0 0 1.5px #c96442,0 1px 3px rgba(0,0,0,.3);' +
+    '  background:#fff;box-shadow:0 0 0 1.5px var(--accent, #c96442),0 1px 3px rgba(0,0,0,.3);' +
     '  transform:translate(-50%,-50%)}' +
     '.spill .handle[data-c=nw]{left:0;top:0;cursor:nwse-resize}' +
     '.spill .handle[data-c=ne]{left:100%;top:0;cursor:nesw-resize}' +
@@ -186,7 +186,7 @@
     '.spill .handle[data-c=se]{left:100%;top:100%;cursor:nwse-resize}' +
     ':host([data-reframe]){z-index:10}' +
     ':host([data-reframe]) .spill{display:block}' +
-    ':host([data-reframe]) .frame{box-shadow:0 0 0 2px #c96442}' +
+    ':host([data-reframe]) .frame{box-shadow:0 0 0 2px var(--accent, #c96442)}' +
     '.empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;' +
     '  justify-content:center;gap:6px;text-align:center;padding:12px;box-sizing:border-box;' +
     '  cursor:pointer;user-select:none}' +
@@ -195,11 +195,11 @@
     '.empty .sub{font-size:11px}' +
     '.empty .sub u{text-underline-offset:2px;text-decoration-color:rgba(0,0,0,.25)}' +
     '.empty:hover .sub u{color:rgba(0,0,0,.75);text-decoration-color:currentColor}' +
-    ':host([data-over]) .frame{outline:2px solid #c96442;outline-offset:-2px;' +
+    ':host([data-over]) .frame{outline:2px solid var(--accent, #c96442);outline-offset:-2px;' +
     '  background:rgba(201,100,66,.10)}' +
     '.ring{position:absolute;inset:0;pointer-events:none;border:1.5px dashed rgba(0,0,0,.25);' +
     '  transition:border-color .12s}' +
-    ':host([data-over]) .ring{border-color:#c96442}' +
+    ':host([data-over]) .ring{border-color:var(--accent, #c96442)}' +
     ':host([data-filled]) .ring{display:none}' +
     // Controls sit BELOW the mask (top:100%), absolutely positioned so the
     // author-declared slot height is unaffected. The gap is padding, not a
