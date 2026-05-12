@@ -1,4 +1,4 @@
-# Ansar's Portfolio - NOTE: STILL UNDER DEVELOPMENT
+# Ansar's Portfolio
 
 A professional, minimalist, single-page portfolio website for showcasing my work as an AI/ML Engineer and Data Scientist. Built with HTML, CSS (using Tailwind classes and custom styles), and vanilla JavaScript. Designed for deployment on GitHub Pages.
 
