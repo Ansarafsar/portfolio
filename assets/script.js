@@ -86,6 +86,37 @@
     setInterval(tickClock, 1000 * 30);
   }
 
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function setMenu(open) {
+    if (!menuBtn || !mobileMenu) return;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    mobileMenu.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
+  }
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      const open = menuBtn.getAttribute('aria-expanded') !== 'true';
+      setMenu(open);
+    });
+
+    // Close on link click + Escape + resize-up
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setMenu(false);
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) setMenu(false);
+    });
+  }
+
   /* ---------- Smooth-scroll already handled by CSS;
                 stop layout jumps on hashes that don't exist ---------- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
